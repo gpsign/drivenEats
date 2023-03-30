@@ -1,0 +1,62 @@
+.titulo {
+  margin-top: 8px;
+  margin-left: 21px;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 44px;
+  color: #ffffff;
+}
+
+.subtitulo {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  margin-left: 21px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+button {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container > p {
+  margin-bottom: 17px;
+  font-family: "Righteous";
+  font-weight: 400;
+  font-size: 26px;
+  color: #333333;
+}
+
+.comida h1 {
+  font-family: "Roboto";
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+}
+
+.comida p {
+  margin-top: 4px;
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #a6a6a6;
+}
+
+.comida h2 {
+  margin-top: 5px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}

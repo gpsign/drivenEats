@@ -1,0 +1,73 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.conteudo {
+  margin-top: 106px;
+  margin-bottom: 108px;
+  display: flex;
+  flex-direction: column;
+  width: 414px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 414px;
+  height: 92px;
+  background-color: #cf2b2b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.concluir{
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+}
+
+button{
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  background: #CBCBCB;
+  border: none;
+}
+
+.container{
+  margin-top: 27px;
+  margin-left: 19px;
+}
+
+.lista{
+  overflow-x: scroll;
+  display: flex;
+  justify-content: space-between;
+  height: 216px;
+}
+
+.comida{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  margin-right: 16px;
+  width: 172px;
+  height: 100%;
+}
+
+.comida img{
+  border-radius: 4px;
+  width: 144px;
+}
