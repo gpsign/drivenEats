@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.conteudo {
+  margin-top: 106px;
+  margin-bottom: 108px;
+  display: flex;
+  flex-direction: column;
+  width: 414px;
+  background: transparent;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 414px;
+  height: 92px;
+  background-color: #cf2b2b;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.concluir {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+  z-index: 2;
+}
+
+button {
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  background: #cbcbcb;
+  border: none;
+}
+
+.container {
+  margin-top: 17px;
+  margin-left: 19px;
+  position: relative;
+}
+
+.fadeout {
+  width: 30px;
+  height: 216px;    
+  position:absolute;
+  right: -8px;
+  bottom: 0px;
+  background:linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6));
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.lista {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 226px;
+}
+
+/* Tira a scrollbar horizontal no mobile */
+@media (max-width: 1080px) {
+  .lista::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lista {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.comida {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  margin-right: 16px;
+  width: 172px;
+  height: 216px;
+  border-radius: 8px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.comida img {
+  border-radius: 4px;
+  width: 144px;
+}
+
+.check{
+  font-size: 0px;
+  position: absolute;
+  bottom: 4px;
+  right: 6px;
+}
+
+.selecionado{
+  background: linear-gradient(#d9d9d9, #d9d9d9) padding-box,
+              linear-gradient(to top, #32995F, #10ff75) border-box,
+              linear-gradient(to bottom, #00AF21, #005500) border-box;
+  border: 4px solid transparent;
+  padding: 10px;
+}
+
+.selecionado > .check{
+  font-size: 24px;
+  color: #008800;
+}

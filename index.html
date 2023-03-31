@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DrivenEats</title>
     <!--Reset e CSS-->
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="formatacao.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./CSS/reset.css" />
+    <link rel="stylesheet" href="./CSS/formatacao.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
 
     <!--Fontes-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,32 +30,36 @@
       <p class="subtitulo">Sua comida em 6 minutos!</p>
     </div>
     <div class="concluir">
-      <button>Selecione os 3 itens<br>para fechar o pedido</button>
+      <button class="outline">
+        Selecione os 3 itens<br />para fechar o pedido
+      </button>
     </div>
     <div class="conteudo">
       <div class="container">
         <p>Primeiro, seu prato</p>
+        <div class="fadeout"></div>
         <div class="lista">
-          <div class="comida">
-            <img src="./imgs/frango_yin_yang.png" alt="">
+          <div class="comida selecionado">
+            <ion-icon class="check" name="checkmark-circle"></ion-icon>
+            <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1>Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <h2>R$ 14,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/frango_yin_yang.png" alt="">
+            <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1>Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <h2>R$ 14,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/frango_yin_yang.png" alt="">
+            <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1>Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <h2>R$ 14,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/frango_yin_yang.png" alt="">
+            <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1>Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <h2>R$ 14,90</h2>
@@ -64,27 +68,28 @@
       </div>
       <div class="container">
         <p>Agora, sua bebida</p>
+        <div class="fadeout"></div>
         <div class="lista">
           <div class="comida">
-            <img src="./imgs/coca-cola.png" alt="">
+            <img src="./imgs/coca-cola.png" alt="" />
             <h1>Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <h2>R$ 4,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/coca-cola.png" alt="">
+            <img src="./imgs/coca-cola.png" alt="" />
             <h1>Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <h2>R$ 4,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/coca-cola.png" alt="">
+            <img src="./imgs/coca-cola.png" alt="" />
             <h1>Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <h2>R$ 4,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/coca-cola.png" alt="">
+            <img src="./imgs/coca-cola.png" alt="" />
             <h1>Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <h2>R$ 4,90</h2>
@@ -92,28 +97,29 @@
         </div>
       </div>
       <div class="container">
+        <div class="fadeout"></div>
         <p>Por fim, sua sobremesa</p>
         <div class="lista">
           <div class="comida">
-            <img src="./imgs/pudim.png" alt="">
+            <img src="./imgs/pudim.png" alt="" />
             <h1>Pudim</h1>
             <p>Apenas pudim</p>
             <h2>R$ 7,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/pudim.png" alt="">
+            <img src="./imgs/pudim.png" alt="" />
             <h1>Pudim</h1>
             <p>Apenas pudim</p>
             <h2>R$ 7,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/pudim.png" alt="">
+            <img src="./imgs/pudim.png" alt="" />
             <h1>Pudim</h1>
             <p>Apenas pudim</p>
             <h2>R$ 7,90</h2>
           </div>
           <div class="comida">
-            <img src="./imgs/pudim.png" alt="">
+            <img src="./imgs/pudim.png" alt="" />
             <h1>Pudim</h1>
             <p>Apenas pudim</p>
             <h2>R$ 7,90</h2>
@@ -121,5 +127,13 @@
         </div>
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
