@@ -1,6 +1,7 @@
 body {
   display: flex;
   justify-content: center;
+  background: #E5E5E5;
 }
 
 * {
@@ -36,7 +37,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 414px;
   height: 92px;
+  background-color: #FFFFFF;
   z-index: 2;
 }
 
@@ -55,13 +58,12 @@ button {
 }
 
 .fadeout {
-  width: 30px;
-  height: 216px;    
+  width: 35px;
+  height: 219px;    
   position:absolute;
   right: -8px;
-  bottom: 0px;
-  background:linear-gradient(to right, transparent, rgba(255, 255, 255, 0.6));
-  border-radius: 8px;
+  bottom: 2px;
+  background:linear-gradient(to right, transparent, #E5E5E5);
   z-index: 1;
 }
 
@@ -93,9 +95,9 @@ button {
   margin-right: 16px;
   width: 172px;
   height: 216px;
-  border-radius: 8px;
-  background-color: #d9d9d9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 
@@ -112,11 +114,11 @@ button {
 }
 
 .selecionado{
-  background: linear-gradient(#d9d9d9, #d9d9d9) padding-box,
+  background: linear-gradient(#FFFFFF, #FFFFFF) padding-box,
               linear-gradient(to top, #32995F, #10ff75) border-box,
               linear-gradient(to bottom, #00AF21, #005500) border-box;
-  border: 4px solid transparent;
-  padding: 10px;
+  border: 5px solid transparent;
+  padding: 9px;
 }
 
 .selecionado > .check{
