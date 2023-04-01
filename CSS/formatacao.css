@@ -23,7 +23,25 @@ button {
   font-size: 20px;
   line-height: 23px;
   text-align: center;
-  
+  color: #ffffff;
+}
+
+.finalizar > h1 {
+  margin-top: 21px;
+  margin-bottom: 28px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 22px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.pedido .nome,
+.pedido .preco {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
   color: #ffffff;
 }
 
@@ -53,8 +71,8 @@ button {
   color: #999999;
 }
 
-.comida h2 {
-  margin-top: 5px;
+.valor h2 {
+  margin-right: 3px;
   font-family: "Roboto";
   font-weight: 400;
   font-size: 16px;

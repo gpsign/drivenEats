@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="device-width, initial-scale=1.0" />
     <title>DrivenEats</title>
     <!--Reset e CSS-->
     <link rel="stylesheet" href="./CSS/reset.css" />
@@ -25,86 +25,139 @@
     />
   </head>
   <body>
-    <div class="header">
+    <div class="header" onclick="finalizar()">
       <p class="titulo">DrivenEats</p>
       <p class="subtitulo">Sua comida em 6 minutos!</p>
     </div>
     <div class="concluir">
-      <button >
+      <button disabled onclick="finalizar()">
         Selecione os 3 itens<br />para fechar o pedido
       </button>
+    </div>
+
+    <div class="finalizarSobrepor esconder">
+      <div class="finalizar">
+        <h1>Confirme seu pedido</h1>
+        <div class="informacoesPedido">
+          <div class="pedido">
+            <div class="prato">
+              <div class="nome"></div>
+              <div class="preco"></div>
+            </div>
+          </div>
+          <div class="pedido">
+            <div class="bebida">
+              <div class="nome"></div>
+              <div class="preco"></div>
+            </div>
+          </div>
+          <div class="pedido">
+            <div class="sobremesa">
+              <div class="nome"></div>
+              <div class="preco"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="conteudo">
       <div class="container">
         <p>Primeiro, seu prato</p>
-        <div class="fadeout"></div>
+        <div class="fadeout-direita"></div>
+        <div class="fadeout-esquerda"></div>
         <div class="lista prato">
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1 class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
-            <h2 class="preco">R$ 14,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">14,90</h2>
+            </div>
+          </div>
+          <div class="comida" onclick="selecionar(this)">
+            <ion-icon class="check" name="checkmark-circle"></ion-icon>
+            <img src="./imgs/frango_yin_yang.png" alt="" />
+            <h1 class="nome">Shawarma</h1>
+            <p>Um pouco de batata, um pouco de salada</p>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">27.30</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1 class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
-            <h2 class="preco">R$ 14,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">14,90</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
             <h1 class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
-            <h2 class="preco">R$ 14,90</h2>
-          </div>
-          <div class="comida" onclick="selecionar(this)">
-            <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 class="nome">Frango Yin Yang</h1>
-            <p>Um pouco de batata, um pouco de salada</p>
-            <h2 class="preco">R$ 14,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">14,90</h2>
+            </div>
           </div>
         </div>
       </div>
       <div class="container">
         <p>Agora, sua bebida</p>
-        <div class="fadeout"></div>
+        <div class="fadeout-direita"></div>
+        <div class="fadeout-esquerda"></div>
         <div class="lista bebida">
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
             <h1 class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
-            <h2 class="preco">R$ 4,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">4,90</h2>
+            </div>
+          </div>
+          <div class="comida" onclick="selecionar(this)">
+            <ion-icon class="check" name="checkmark-circle"></ion-icon>
+            <img src="./imgs/coca-cola.png" alt="" />
+            <h1 class="nome">Alvejante</h1>
+            <p>Lata 350ml</p>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">0.99</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
             <h1 class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
-            <h2 class="preco">R$ 4,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">4,90</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
             <h1 class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
-            <h2 class="preco">R$ 4,90</h2>
-          </div>
-          <div class="comida" onclick="selecionar(this)">
-            <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/coca-cola.png" alt="" />
-            <h1 class="nome">Coquinha gelada</h1>
-            <p>Lata 350ml</p>
-            <h2 class="preco">R$ 4,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">4,90</h2>
+            </div>
           </div>
         </div>
       </div>
       <div class="container">
-        <div class="fadeout"></div>
+        <div class="fadeout-direita"></div>
+        <div class="fadeout-esquerda"></div>
         <p>Por fim, sua sobremesa</p>
         <div class="lista sobremesa">
           <div class="comida" onclick="selecionar(this)">
@@ -112,28 +165,40 @@
             <img src="./imgs/pudim.png" alt="" />
             <h1 class="nome">Pudim</h1>
             <p>Apenas pudim</p>
-            <h2 class="preco">R$ 7,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">7,90</h2>
+            </div>
+          </div>
+          <div class="comida" onclick="selecionar(this)">
+            <ion-icon class="check" name="checkmark-circle"></ion-icon>
+            <img src="./imgs/pudim.png" alt="" />
+            <h1 class="nome">Cianeto</h1>
+            <p>Apenas pudim</p>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">999.99</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
             <h1 class="nome">Pudim</h1>
             <p>Apenas pudim</p>
-            <h2 class="preco">R$ 7,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">7,90</h2>
+            </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
             <h1 class="nome">Pudim</h1>
             <p>Apenas pudim</p>
-            <h2 class="preco">R$ 7,90</h2>
-          </div>
-          <div class="comida" onclick="selecionar(this)">
-            <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/pudim.png" alt="" />
-            <h1 class="nome">Pudim</h1>
-            <p>Apenas pudim</p>
-            <h2 class="preco">R$ 7,90</h2>
+            <div class="valor">
+              <h2>R$</h2>
+              <h2 class="preco">7,90</h2>
+            </div>
           </div>
         </div>
       </div>
