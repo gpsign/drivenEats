@@ -43,6 +43,10 @@ body {
   z-index: 2;
 }
 
+.concluido{
+  background-color: #32B72F;;
+}
+
 button {
   width: 364px;
   height: 61px;
@@ -57,13 +61,23 @@ button {
   position: relative;
 }
 
-.fadeout {
+.fadeout-direita {
   width: 35px;
   height: 219px;    
   position:absolute;
-  right: -8px;
+  right: 0px;
   bottom: 2px;
   background:linear-gradient(to right, transparent, #E5E5E5);
+  z-index: 1;
+}
+
+.fadeout-esquerda{
+  width: 5px;
+  height: 219px;    
+  position:absolute;
+  left: -2px;
+  bottom: 2px;
+  background:linear-gradient(to left, transparent, #E5E5E5);
   z-index: 1;
 }
 
@@ -111,6 +125,7 @@ button {
   position: absolute;
   bottom: 4px;
   right: 6px;
+  color: #008800;
 }
 
 .selecionado{
@@ -119,9 +134,10 @@ button {
               linear-gradient(to bottom, #00AF21, #005500) border-box;
   border: 5px solid transparent;
   padding: 9px;
+  transition: 0.2s;
 }
 
 .selecionado > .check{
+  transition: 0.2s;
   font-size: 24px;
-  color: #008800;
 }
