@@ -1,4 +1,13 @@
 let carrinho = 0;
+const conteudo = document.querySelector(".conteudo");
+const header = document.querySelector(".header");
+const concluir = document.querySelector(".concluir");
+const finalizarSobrepor = document.querySelector(".finalizarSobrepor");
+const finalizar = document.querySelector(".finalizarSobrepor .finalizar");
+const usuarioSobrepor = document.querySelector(".usuarioSobrepor");
+const infoUsuario = document.querySelector(".finalizarSobrepor .infoUsuario");
+const nomeUsuario = document.querySelector(".infoUsuario .nomeUsuario");
+const enderecoUsuario = document.querySelector(".infoUsuario .enderecoUsuario");
 
 function selecionar(comida) {
   /*Verifica em qual lista foi selecionado*/
@@ -36,38 +45,81 @@ function liberarBotao() {
   } else botao.innerHTML = "Selecione os 3 itens<br />para fechar o pedido";
 }
 
-function finalizar() {
+function calcular(prato, bebida, sobremesa) {
+  prato = prato.replace(",", ".");
+  bebida = bebida.replace(",", ".");
+  sobremesa = sobremesa.replace(",", ".");
+  let total = Number(prato) + Number(bebida) + Number(sobremesa);
+  return total.toFixed(2);
+}
+
+function dialogPedido() {
   /*Blur da tela e mostrar a caixa*/
-  let conteudo = document.querySelector(".conteudo");
-  let header = document.querySelector(".header");
-  let concluir = document.querySelector(".concluir");
-  let finalizar = document.querySelector(".finalizarSobrepor");
   conteudo.classList.add("blur");
   header.classList.add("blur");
   concluir.classList.add("blur");
-  finalizar.classList.remove("esconder");
+  finalizarSobrepor.classList.remove("esconder");
 
   /*Aplica nome e preco do prato na lista de compras*/
-  let pratoNome = document.querySelector(".prato .selecionado .nome");
-  let pratoPreco = document.querySelector(".prato .selecionado .preco");
-  let pratoFinal = document.querySelector(".pedido .prato");
+  let pratoNome = document.querySelector(".prato .selecionado .nome").innerHTML;
+  let pratoPreco = document.querySelector(
+    ".prato .selecionado .preco"
+  ).innerHTML;
+  let info = document.querySelector(".pedido .prato");
+  let infoNome = info.children[0];
+  let infoPreco = info.children[1];
 
-  pratoFinal.children[0].innerHTML = pratoNome.innerHTML;
-  pratoFinal.children[1].innerHTML = pratoPreco.innerHTML;
+  infoNome.innerHTML = pratoNome;
+  infoPreco.innerHTML = pratoPreco;
 
   /*Aplica nome e preco da bebida na lista de compras*/
-  let bebidaNome = document.querySelector(".bebida .selecionado .nome");
-  let bebidaPreco = document.querySelector(".bebida .selecionado .preco");
-  let bebidaFinal = document.querySelector(".pedido .bebida");
+  let bebidaNome = document.querySelector(
+    ".bebida .selecionado .nome"
+  ).innerHTML;
+  let bebidaPreco = document.querySelector(
+    ".bebida .selecionado .preco"
+  ).innerHTML;
 
-  bebidaFinal.children[0].innerHTML = bebidaNome.innerHTML;
-  bebidaFinal.children[1].innerHTML = bebidaPreco.innerHTML;
+  info = document.querySelector(".pedido .bebida");
+  infoNome = info.children[0];
+  infoPreco = info.children[1];
+
+  infoNome.innerHTML = bebidaNome;
+  infoPreco.innerHTML = bebidaPreco;
 
   /*Aplica nome e preco da sobremesa na lista de compras*/
-  let sobremesaNome = document.querySelector(".sobremesa .selecionado .nome");
-  let sobremesaPreco = document.querySelector(".sobremesa .selecionado .preco");
-  let sobremesaFinal = document.querySelector(".pedido .sobremesa");
+  let sobremesaNome = document.querySelector(
+    ".sobremesa .selecionado .nome"
+  ).innerHTML;
+  let sobremesaPreco = document.querySelector(
+    ".sobremesa .selecionado .preco"
+  ).innerHTML;
 
-  sobremesaFinal.children[0].innerHTML = sobremesaNome.innerHTML;
-  sobremesaFinal.children[1].innerHTML = sobremesaPreco.innerHTML;
+  info = document.querySelector(".pedido .sobremesa");
+  infoNome = info.children[0];
+  infoPreco = info.children[1];
+
+  infoNome.innerHTML = sobremesaNome;
+  infoPreco.innerHTML = sobremesaPreco;
+
+  let total = document.querySelector(".informacoesPedido .total");
+  total.children[1].innerHTML =
+    "R$ " + calcular(pratoPreco, bebidaPreco, sobremesaPreco).replace(".", ",");
+}
+
+function dialogUsuario(){
+  finalizarSobrepor.classList.add("esconder");
+  usuarioSobrepor.classList.remove("esconder");
+}
+
+function cancelarPedido() {
+  conteudo.classList.remove("blur");
+  header.classList.remove("blur");
+  concluir.classList.remove("blur");
+  finalizarSobrepor.classList.add("esconder");
+}
+
+function cancelarDados(){
+  finalizarSobrepor.classList.remove("esconder");
+  usuarioSobrepor.classList.add("esconder");
 }

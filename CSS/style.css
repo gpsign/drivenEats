@@ -4,16 +4,12 @@ body {
   background: #e5e5e5;
 }
 
-.blur{
+.blur {
   filter: blur(20px);
   transition: 0.2s;
 }
 
-.revelar{
-  display: block;
-}
-
-.esconder{
+.esconder {
   display: none;
   height: 0px;
 }
@@ -57,7 +53,7 @@ body {
   z-index: 2;
 }
 
-.finalizarSobrepor{
+.finalizarSobrepor, .usuarioSobrepor {
   position: fixed;
   top: 0;
   left: 0;
@@ -70,13 +66,14 @@ body {
 .finalizar {
   position: fixed;
   top: 50%;
-  left:50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 377px;
   height: 353px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background: #50d074;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
@@ -88,20 +85,93 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 326px;
-  /*height: 147px;*/
-  height: 120px;
+  height: 147px;
 }
- 
-.pedido{
+
+.pedido {
   width: 100%;
 }
 
-.pedido .prato, .pedido .bebida, .pedido .sobremesa{
+.pedido .prato,
+.pedido .bebida,
+.pedido .sobremesa {
   display: flex;
   justify-content: space-between;
 }
 
-button {
+.total {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pedir{
+  width: 329px;
+  height: 52px;
+  background: #ffffff;
+  border-radius: 100px;
+  border: none;
+}
+
+.pedir:active{
+  background-color: #32802f;
+}
+
+.cancelar{
+  width: 209px;
+  height: 52px;
+  background-color: #50d074;
+  border-radius: 100px;
+  border: none;
+}
+
+.cancelar:active{
+  color: rgba(255, 0, 0, 0.75);
+}
+
+.infoUsuario{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 377px;
+  height: 353px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background: #50d074;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.inputs{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 326px;
+  height: 147px;
+  margin-bottom:32px;
+}
+
+.inputNome, .inputEndereco{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+input{
+  width: 329px;
+  height: 42px;
+  background: #e5e5e5;
+  border-radius: 100px;
+  border: solid 2px #cbcbcb;
+}
+
+.concluir button {
   width: 364px;
   height: 61px;
   border-radius: 50px;
@@ -109,12 +179,12 @@ button {
   border: none;
 }
 
-button:enabled:active {
+.concluir button:enabled:active {
   background-color: #32802f;
   transform: translateY(2px);
 }
 
-button:disabled {
+.concluir button:disabled {
   background-color: #cbcbcb;
 }
 
@@ -183,7 +253,7 @@ button:disabled {
   width: 144px;
 }
 
-.valor{
+.valor {
   margin-top: 5px;
   display: flex;
   width: 66px;

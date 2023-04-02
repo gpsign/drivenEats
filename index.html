@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DrivenEats</title>
     <!--Reset e CSS-->
     <link rel="stylesheet" href="./CSS/reset.css" />
@@ -25,12 +25,12 @@
     />
   </head>
   <body>
-    <div class="header" onclick="finalizar()">
+    <div class="header">
       <p class="titulo">DrivenEats</p>
       <p class="subtitulo">Sua comida em 6 minutos!</p>
     </div>
     <div class="concluir">
-      <button disabled onclick="finalizar()">
+      <button disabled onclick="dialogPedido()">
         Selecione os 3 itens<br />para fechar o pedido
       </button>
     </div>
@@ -57,7 +57,34 @@
               <div class="preco"></div>
             </div>
           </div>
+          <div class="total">
+            <h1>TOTAL</h1>
+            <h1></h1>
+          </div>
         </div>
+        <button class="pedir" onclick="dialogUsuario()">
+          Tudo certo, pode pedir!
+        </button>
+        <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
+      </div>
+    </div>
+    <div class="usuarioSobrepor esconder">
+      <div class="infoUsuario">
+        <h1>Preencha os campos</h1>
+        <div class="inputs">
+          <div class="inputNome">
+            <p>Nome:</p>
+            <input type="text" class="nomeUsuario" />
+          </div>
+          <div class="inputEndereco">
+            <p>Endereco:</p>
+            <input type="text" class="enderecoUsuario" />
+          </div>
+        </div>
+        <button class="pedir" onclick="dialogUsuario()">
+          Confirmar dados
+        </button>
+        <button class="cancelar" onclick="cancelarDados()">Cancelar</button>
       </div>
     </div>
     <div class="conteudo">
@@ -83,7 +110,7 @@
             <p>Um pouco de batata, um pouco de salada</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">27.30</h2>
+              <h2 class="preco">27,30</h2>
             </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
@@ -130,7 +157,7 @@
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">0.99</h2>
+              <h2 class="preco">0,99</h2>
             </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
@@ -177,7 +204,7 @@
             <p>Apenas pudim</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">999.99</h2>
+              <h2 class="preco">999,99</h2>
             </div>
           </div>
           <div class="comida" onclick="selecionar(this)">
