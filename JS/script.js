@@ -8,6 +8,9 @@ const usuarioSobrepor = document.querySelector(".usuarioSobrepor");
 const infoUsuario = document.querySelector(".finalizarSobrepor .infoUsuario");
 const nomeUsuario = document.querySelector(".infoUsuario .nomeUsuario");
 const enderecoUsuario = document.querySelector(".infoUsuario .enderecoUsuario");
+const inputNome = document.querySelector(".inputNome input");
+const inputEndereco = document.querySelector(".inputEndereco input")
+let total = '';
 
 function selecionar(comida) {
   /*Verifica em qual lista foi selecionado*/
@@ -102,8 +105,8 @@ function dialogPedido() {
   infoNome.innerHTML = sobremesaNome;
   infoPreco.innerHTML = sobremesaPreco;
 
-  let total = document.querySelector(".informacoesPedido .total");
-  total.children[1].innerHTML =
+  total = document.querySelector(".informacoesPedido .total").children[1];
+  total.innerHTML =
     "R$ " + calcular(pratoPreco, bebidaPreco, sobremesaPreco).replace(".", ",");
 }
 
@@ -122,4 +125,18 @@ function cancelarPedido() {
 function cancelarDados(){
   finalizarSobrepor.classList.remove("esconder");
   usuarioSobrepor.classList.add("esconder");
+  inputEndereco.value = inputNome.value = '';
+}
+
+function enviarPedido(){
+  let prato = "\n- Prato: " + document.querySelector(".prato .selecionado .nome").innerHTML;
+  let bebida = "\n- Bebida: " + document.querySelector(".bebida .selecionado .nome").innerHTML;
+  let sobremesa = "\n- Sobremesa: " + document.querySelector(".sobremesa .selecionado .nome").innerHTML;
+
+  let mensagem = "Olá, gostaria de fazer o pedido:" + prato + bebida + sobremesa + "\nTotal: " + total.innerHTML;
+  mensagem += "\nNome: " + inputNome.value + "\nEndereco: " + inputEndereco.value;
+
+  alert("Voce sera redirecionado ao whatsapp");
+  window.open("https://wa.me/5545998491326?text=" + encodeURIComponent(mensagem), "_blank").focus();
+  inputEndereco.value = inputNome.value = '';
 }

@@ -171,6 +171,11 @@ input{
   border: solid 2px #cbcbcb;
 }
 
+input:focus{
+  outline: none !important;
+  border: 2px solid gray;
+}
+
 .concluir button {
   width: 364px;
   height: 61px;

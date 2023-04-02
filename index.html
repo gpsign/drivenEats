@@ -30,13 +30,12 @@
       <p class="subtitulo">Sua comida em 6 minutos!</p>
     </div>
     <div class="concluir">
-      <button disabled onclick="dialogPedido()">
+      <button data-test="order-btn" disabled onclick="dialogPedido()">
         Selecione os 3 itens<br />para fechar o pedido
       </button>
     </div>
-
     <div class="finalizarSobrepor esconder">
-      <div class="finalizar">
+      <div data-test="confirm-order-modal" class="finalizar">
         <h1>Confirme seu pedido</h1>
         <div class="informacoesPedido">
           <div class="pedido">
@@ -65,7 +64,7 @@
         <button class="pedir" onclick="dialogUsuario()">
           Tudo certo, pode pedir!
         </button>
-        <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
+        <button data-test="cancel-order-btn" class="cancelar" onclick="cancelarPedido()">Cancelar</button>
       </div>
     </div>
     <div class="usuarioSobrepor esconder">
@@ -81,7 +80,7 @@
             <input type="text" class="enderecoUsuario" />
           </div>
         </div>
-        <button class="pedir" onclick="dialogUsuario()">
+        <button data-test="confirm-order-btn" class="pedir" onclick="enviarPedido()">
           Confirmar dados
         </button>
         <button class="cancelar" onclick="cancelarDados()">Cancelar</button>
@@ -93,44 +92,44 @@
         <div class="fadeout-direita"></div>
         <div class="fadeout-esquerda"></div>
         <div class="lista prato">
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 class="nome">Frango Yin Yang</h1>
+            <h1 data-test="item-name" class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">14,90</h2>
+              <h2 data-test="item-price" class="preco">14,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 class="nome">Shawarma</h1>
+            <h1 data-test="item-name" class="nome">Shawarma</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">27,30</h2>
+              <h2 data-test="item-price" class="preco">27,30</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 class="nome">Frango Yin Yang</h1>
+            <h1 data-test="item-name" class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">14,90</h2>
+              <h2 data-test="item-price" class="preco">14,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 class="nome">Frango Yin Yang</h1>
+            <h1 data-test="item-name" class="nome">Frango Yin Yang</h1>
             <p>Um pouco de batata, um pouco de salada</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">14,90</h2>
+              <h2 data-test="item-price" class="preco">14,90</h2>
             </div>
           </div>
         </div>
@@ -140,44 +139,44 @@
         <div class="fadeout-direita"></div>
         <div class="fadeout-esquerda"></div>
         <div class="lista bebida">
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
-            <h1 class="nome">Coquinha gelada</h1>
+            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">4,90</h2>
+              <h2 data-test="item-price" class="preco">4,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
-            <h1 class="nome">Alvejante</h1>
+            <h1 data-test="item-name" class="nome">Alvejante</h1>
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">0,99</h2>
+              <h2 data-test="item-price" class="preco">0,99</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
-            <h1 class="nome">Coquinha gelada</h1>
+            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">4,90</h2>
+              <h2 data-test="item-price" class="preco">4,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
-            <h1 class="nome">Coquinha gelada</h1>
+            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">4,90</h2>
+              <h2 data-test="item-price" class="preco">4,90</h2>
             </div>
           </div>
         </div>
@@ -187,44 +186,44 @@
         <div class="fadeout-esquerda"></div>
         <p>Por fim, sua sobremesa</p>
         <div class="lista sobremesa">
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
-            <h1 class="nome">Pudim</h1>
+            <h1 data-test="item-name" class="nome">Pudim</h1>
             <p>Apenas pudim</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">7,90</h2>
+              <h2 data-test="item-price" class="preco">7,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
-            <h1 class="nome">Cianeto</h1>
+            <h1 data-test="item-name" class="nome">Cianeto</h1>
             <p>Apenas pudim</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">999,99</h2>
+              <h2 data-test="item-price" class="preco">999,99</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
-            <h1 class="nome">Pudim</h1>
+            <h1 data-test="item-name" class="nome">Pudim</h1>
             <p>Apenas pudim</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">7,90</h2>
+              <h2 data-test="item-price" class="preco">7,90</h2>
             </div>
           </div>
-          <div class="comida" onclick="selecionar(this)">
+          <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/pudim.png" alt="" />
-            <h1 class="nome">Pudim</h1>
+            <h1 data-test="item-name" class="nome">Pudim</h1>
             <p>Apenas pudim</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 class="preco">7,90</h2>
+              <h2 data-test="item-price" class="preco">7,90</h2>
             </div>
           </div>
         </div>

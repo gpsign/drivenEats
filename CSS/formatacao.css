@@ -115,3 +115,12 @@
   line-height: 19px;
   color: #000000;
 }
+
+input{
+  text-indent: 12px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: black;
+}
