@@ -30,7 +30,7 @@ function liberarBotao() {
     botao.innerHTML = "Selecione os 3 itens <br />para fechar o pedido";
     botao.disabled = true;
   } else {
-    botao.innerHTML = "Fechar o pedido";
+    botao.innerHTML = "Fechar pedido";
     botao.disabled = false;
   }
 }
@@ -114,10 +114,10 @@ function enviarPedido() {
     prato +
     bebida +
     sobremesa +
-    "\nTotal: " +
+    "\n" + "Total: " +
     total.innerHTML;
   mensagem +=
-    "\n\nNome: " + prompt("Nome:") + "\nEndereco: " + prompt("Endereço");
+    "\n\n" + "Nome: " + prompt("Nome:") + "\n" + "Endereco: " + prompt("Endereço");
 
   window
     .open(
