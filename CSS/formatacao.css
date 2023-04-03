@@ -54,16 +54,6 @@
   color: #ffffff;
 }
 
-.infoUsuario > h1{
-  margin-top: 16px;
-  margin-bottom: 8px;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 22px;
-  text-align: center;
-  color: #ffffff;
-}
-
 .pedido .nome,
 .pedido .preco {
   font-family: "Roboto";
@@ -114,13 +104,4 @@
   font-size: 16px;
   line-height: 19px;
   color: #000000;
-}
-
-input{
-  text-indent: 12px;
-  font-family: "Roboto";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 19px;
-  color: black;
 }

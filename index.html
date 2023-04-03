@@ -31,7 +31,7 @@
     </div>
     <div class="concluir">
       <button data-test="order-btn" disabled onclick="dialogPedido()">
-        Selecione os 3 itens<br />para fechar o pedido
+        Selecione os 3 itens <br />para fechar o pedido
       </button>
     </div>
     <div class="finalizarSobrepor esconder">
@@ -61,29 +61,10 @@
             <h1></h1>
           </div>
         </div>
-        <button class="pedir" onclick="dialogUsuario()">
+        <button data-test="confirm-order-btn" class="pedir" onclick="enviarPedido()">
           Tudo certo, pode pedir!
         </button>
-        <button data-test="cancel-order-btn" class="cancelar" onclick="cancelarPedido()">Cancelar</button>
-      </div>
-    </div>
-    <div class="usuarioSobrepor esconder">
-      <div class="infoUsuario">
-        <h1>Preencha os campos</h1>
-        <div class="inputs">
-          <div class="inputNome">
-            <p>Nome:</p>
-            <input type="text" class="nomeUsuario" />
-          </div>
-          <div class="inputEndereco">
-            <p>Endereco:</p>
-            <input type="text" class="enderecoUsuario" />
-          </div>
-        </div>
-        <button data-test="confirm-order-btn" class="pedir" onclick="enviarPedido()">
-          Confirmar dados
-        </button>
-        <button class="cancelar" onclick="cancelarDados()">Cancelar</button>
+        <button data-test="cancel-order-btn" class="cancelar" onclick="fundoBlur()">Cancelar</button>
       </div>
     </div>
     <div class="conteudo">
@@ -104,9 +85,9 @@
           </div>
           <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 data-test="item-name" class="nome">Shawarma</h1>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <img src="./imgs/carrocho-quente.jpg" alt="" />
+            <h1 data-test="item-name" class="nome">Carrocho-Quente</h1>
+            <p>Au Au</p>
             <div class="valor">
               <h2>R$</h2>
               <h2 data-test="item-price" class="preco">27,30</h2>
@@ -114,22 +95,22 @@
           </div>
           <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 data-test="item-name" class="nome">Frango Yin Yang</h1>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <img src="./imgs/cogumelo.png" alt="" />
+            <h1 data-test="item-name" class="nome">Cogumelo</h1>
+            <p>Ve se cresce</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">14,90</h2>
+              <h2 data-test="item-price" class="preco">50,00</h2>
             </div>
           </div>
           <div data-test="dish" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/frango_yin_yang.png" alt="" />
-            <h1 data-test="item-name" class="nome">Frango Yin Yang</h1>
-            <p>Um pouco de batata, um pouco de salada</p>
+            <img src="./imgs/quasar.jpg" alt="" />
+            <h1 data-test="item-name" class="nome">Quasar</h1>
+            <p>???</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">14,90</h2>
+              <h2 data-test="item-price" class="preco">00,01</h2>
             </div>
           </div>
         </div>
@@ -142,7 +123,7 @@
           <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
             <img src="./imgs/coca-cola.png" alt="" />
-            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
+            <h1 data-test="item-name" class="nome">Coquinha Gelada</h1>
             <p>Lata 350ml</p>
             <div class="valor">
               <h2>R$</h2>
@@ -151,32 +132,32 @@
           </div>
           <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/coca-cola.png" alt="" />
-            <h1 data-test="item-name" class="nome">Alvejante</h1>
-            <p>Lata 350ml</p>
+            <img src="./imgs/water.jpg" alt="" />
+            <h1 data-test="item-name" class="nome">*Water*</h1>
+            <p>Gourmet Water</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">0,99</h2>
+              <h2 data-test="item-price" class="preco">75,00</h2>
             </div>
           </div>
           <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/coca-cola.png" alt="" />
-            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
-            <p>Lata 350ml</p>
+            <img src="./imgs/pinkf.jpg" alt="" />
+            <h1 data-test="item-name" class="nome">Pink F.</h1>
+            <p>Para enfrentar deadites</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">4,90</h2>
+              <h2 data-test="item-price" class="preco">25,50</h2>
             </div>
           </div>
           <div data-test="drink" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/coca-cola.png" alt="" />
-            <h1 data-test="item-name" class="nome">Coquinha gelada</h1>
-            <p>Lata 350ml</p>
+            <img src="./imgs/lonlonmilk.png" alt="" />
+            <h1 data-test="item-name" class="nome">Lon Lon Milk</h1>
+            <p>EPONA VEM CA</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">4,90</h2>
+              <h2 data-test="item-price" class="preco">10,00</h2>
             </div>
           </div>
         </div>
@@ -198,9 +179,9 @@
           </div>
           <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/pudim.png" alt="" />
-            <h1 data-test="item-name" class="nome">Cianeto</h1>
-            <p>Apenas pudim</p>
+            <img src="./imgs/Golden_Apple.png" alt="" />
+            <h1 data-test="item-name" class="nome">Golden Apple</h1>
+            <p>Como que come ouro??</p>
             <div class="valor">
               <h2>R$</h2>
               <h2 data-test="item-price" class="preco">999,99</h2>
@@ -208,22 +189,22 @@
           </div>
           <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/pudim.png" alt="" />
-            <h1 data-test="item-name" class="nome">Pudim</h1>
-            <p>Apenas pudim</p>
+            <img src="./imgs/torta.jpg" alt="" />
+            <h1 data-test="item-name" class="nome">Torta</h1>
+            <p>Torta de LMAO</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">7,90</h2>
+              <h2 data-test="item-price" class="preco">6,20</h2>
             </div>
           </div>
           <div data-test="dessert" class="comida" onclick="selecionar(this)">
             <ion-icon class="check" name="checkmark-circle"></ion-icon>
-            <img src="./imgs/pudim.png" alt="" />
-            <h1 data-test="item-name" class="nome">Pudim</h1>
-            <p>Apenas pudim</p>
+            <img src="./imgs/sagu.png" alt="" />
+            <h1 data-test="item-name" class="nome">Sagu</h1>
+            <p>Parece caviar doce</p>
             <div class="valor">
               <h2>R$</h2>
-              <h2 data-test="item-price" class="preco">7,90</h2>
+              <h2 data-test="item-price" class="preco">1,50</h2>
             </div>
           </div>
         </div>
