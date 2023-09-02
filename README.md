@@ -8,7 +8,7 @@ Try it now at https://gpsign.github.io/drivenEats/
 
 ## About
 
-This is an website with a concept to order food online. You choose food, drink and dessert. At the end, a message will be generated with order information that will redirect the user to WhatsApp with the order ready to be sent! Below are the implemented features:
+This is a website with a concept to order food online. You choose the food, drink and dessert. At the end, a message will be generated with order information that will redirect the user to WhatsApp with the order ready to be sent! Below are the implemented features:
 
 - Choose your main course, drink and dessert
 - The button will be enabled after choosing one from each category
